@@ -131,6 +131,28 @@ It also used [Lerna](https://lerna.js.org/) and [Yarn Workspaces](https://classi
    yarn dev:app or npm run dev:app
    ```
 
+### Other setups
+
+We are currently working on setting up pomatez for other platforms including mobile.
+
+Depending on how its going we may end up using Tauri however we are currently planning on using Ionic.
+
+But to start we are experimenting with Tauri. To run the app on Tauri, follow the steps below:
+
+#### Tauri
+
+1. Install all app dependencies.
+
+   ```sh
+   yarn install
+   ```
+
+2. Run tauri dev
+
+   ```sh
+    yarn tauri dev
+   ```
+
 ### 🛠 Building for Production
 
 1. Build Windows installer.
@@ -180,7 +202,7 @@ Thank you friends! :vulcan_salute:
 
 ## :shield: Privacy
 
-This app has analytics that will track number of users only ([analytics.ts](https://github.com/roldanjr/pomatez/blob/master/app/main/src/helpers/analytics.ts)).
+This app has analytics that will track number of users only ([analytics.ts](https://github.com/roldanjr/pomatez/blob/master/app/electron/src/helpers/analytics.ts)).
 
 ## :newspaper: License
 

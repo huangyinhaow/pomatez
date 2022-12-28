@@ -60,7 +60,7 @@ jobs:
         with:
           name: built-app-${{ matrix.name }}
           path: |
-            app/main/dist/*.*
+            app/electron/dist/*.*
       - name: Upload Release Asset(s)
         id: upload-release-asset
         uses: sekwah41/upload-release-assets@v1.1.0
@@ -69,11 +69,11 @@ jobs:
         with:
           upload_url: ${{ needs.release-please.outputs.upload_url }}
           asset_path: |
-            app/main/dist/latest*
-            app/main/dist/*.deb
-            app/main/dist/*.rpm
-            app/main/dist/*.dmg
-            app/main/dist/*.AppImage
-            app/main/dist/*.zip
-            app/main/dist/*.exe
-            app/main/dist/*.blockmap
+            app/electron/dist/latest*
+            app/electron/dist/*.deb
+            app/electron/dist/*.rpm
+            app/electron/dist/*.dmg
+            app/electron/dist/*.AppImage
+            app/electron/dist/*.zip
+            app/electron/dist/*.exe
+            app/electron/dist/*.blockmap
