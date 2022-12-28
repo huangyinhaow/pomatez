@@ -12,12 +12,14 @@
     "dev:renderer": "lerna run dev:renderer --stream",
     "dev:main": "lerna run dev:main --stream",
     "dev:app": "cross-env ELECTRON_ENABLE_LOGGING=1 lerna run start --parallel --stream --ignore '@pomatez/website'",
+    "dev:tauri": "cross-env ELECTRON_ENABLE_LOGGING=1 lerna run start --parallel --stream --ignore '@pomatez/website' --ignore 'pomatez'",
     "prebuild": "lerna run prepare --stream --ignore '@pomatez/website'",
     "build": "lerna run build --parallel --stream --ignore '@pomatez/website'",
     "build:mwl": "yarn build && lerna run build:mwl --stream",
     "build:dir": "yarn build && lerna run build:dir --stream",
     "build:win": "yarn build && lerna run build:win --stream",
     "build:mac": "yarn build && lerna run build:mac --stream",
+    "build:tauri": "tauri build",
     "build:linux": "yarn build && lerna run build:linux --stream",
     "build:snap": "yarn build && lerna run build:snap --stream",
     "release:mw": "yarn build && lerna run release:mw --stream",
@@ -29,7 +31,9 @@
     "serve:site": "lerna run serve --stream --scope '@pomatez/website'",
     "deploy:site": "lerna run deploy --stream --scope '@pomatez/website'",
     "clean:site": "lerna run clean --scope '@pomatez/website'",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev"
   },
   "config": {
     "commitizen": {
@@ -59,7 +63,8 @@
     "rollup": "^2.26.4",
     "rollup-plugin-typescript2": "^0.27.2",
     "typescript": "^4.9.4",
-    "wait-on": "^5.0.0"
+    "wait-on": "^5.0.0",
+    "@tauri-apps/cli": "1.2.2"
   },
   "resolutions": {
     "//": "Check https://github.com/facebook/create-react-app/issues/11773 to see if it has been fixed yet",
